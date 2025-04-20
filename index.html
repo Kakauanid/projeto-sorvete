@@ -4,9 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="icon/carro.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Sorvetes</title>
 </head>
 <body>
+    <header class="topo" id="header">
+        <div class="overlay"></div>
+        <div class=conteudo-topo> 
+            <h1>Ice Cream</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Contato</a>
+                <a href="#">Produtos</a>
+                <form class="barra" action="#" method="get">
+                    <input type="text" placeholder="Pesquisar..." name="q">
+                    <i class="fas fa-search"></i>
+                </form>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="galeria">
+            <div class="item">
+                <img class="img1" src="imagens/1.png" alt="Sorvete 1">
+                <img class="img2" src="imagens/2.png" alt="Sorvete 2">
+            </div>
+            <div class="item">
+                <img class="img1" src="imagens/3.png" alt="Sorvete 1">
+                <img class="img2" src="imagens/4.png" alt="Sorvete 2">
+            </div>
+            <div class="item">
+                <img class="img1" src="imagens/6.png" alt="Sorvete 1">
+                <img class="img2" src="imagens/5.png" alt="Sorvete 2">
+            </div>
+        </div>
+    
+        <footer>
+            <h3>Ice Cream</h3>
+            <p>Site criado por Kauan Ribeiro</p>
+            <a href="#">Instagram</a>
+            <a href="#">Facabook</a>
+        </footer>
+    </main>
+    <script>
+        const imagens = [
+            "imagens/morango.png",
+            "imagens/chocolate.png",
+            "imagens/pistache.png"
+        ];
+
+        let index = 0
+        const header = document.getElementById ('header');
+        
+        function trocarImagem() {
+            header.style.backgroundImage = `url('${imagens[index]}')`;
+            index = (index + 1) % imagens.length;
+        }
+        trocarImagem();
+        setInterval(trocarImagem, 3000);
+    </script>
     
 </body>
 </html>
