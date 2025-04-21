@@ -30,6 +30,8 @@ header {
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    background-color: var(--cor1);
+    box-shadow: 0px 0px 10px black;
 }
 
 .barra {
@@ -78,9 +80,9 @@ header {
 
 .conteudo-topo h1 {
     font-family: var(--fonte3);
-    font-size: 100px;
-    color: var(--cor1);
-    text-shadow: 2px 2px 2px var(--cor2);
+    font-size: 150px;
+    color: #f9f9f9;
+    text-shadow: 2px 2px 2px black;
 }
 
 nav {
@@ -92,12 +94,13 @@ nav {
     text-align: center;
     padding: 15px 30px;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.137);
 }
 
 nav a {
     text-decoration: none;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.116);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.322);
     color:#f9f9f9;
     margin: 0 15px;
     font-size: 18px;
@@ -108,6 +111,8 @@ nav a:hover {
     border-radius:10px;
     padding: 5px;
     background-color:var(--cor3); 
+    color: var(--cor2);
+    font-weight: bold;
 }
 
 main {
@@ -117,11 +122,12 @@ main {
     color: var(--cor2);
     min-width: 300px;  
     max-width: 1000px;
-    background-color:#f9f9f9;
+    background-image: linear-gradient(to bottom, var(--cor1), transparent);
     margin: auto;
     margin-bottom: 30px;
     padding: 20px;
-    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 10px black;
+
 }
 
 .galeria {
@@ -196,6 +202,7 @@ footer {
     font-family: var(--fonte3);
     margin: 0;
     font-size: 60px;
+    text-shadow: 3px 3px 3px var(--cor2);
 }
 
 .right a {
