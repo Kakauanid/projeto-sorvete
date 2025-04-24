@@ -74,6 +74,31 @@
         trocarImagem();
         setInterval(trocarImagem, 3000);
     </script> -->
-    
+    <script>
+        const itens = document.querySelectorAll(".item");
+        const main = document.querySelector("main");
+      
+        itens.forEach((item, index) => {
+          item.addEventListener("mouseover", () => {
+            switch (index) {
+              case 0:
+                main.style.backgroundImage = "linear-gradient(to bottom, #ef3a5d , transparent)";
+                break;
+              case 1:
+                main.style.backgroundImage = "linear-gradient(to bottom, #6f402c, transparent)";
+                break;
+              case 2:
+                main.style.backgroundImage = "linear-gradient(to bottom, #96993a, transparent)";
+                break;
+            }
+          });
+      
+          item.addEventListener("mouseout", () => {
+            // Volta pro padrão (usando as variáveis CSS)
+            main.style.backgroundImage = "linear-gradient(to bottom, var(--cor1), transparent)";
+          });
+        });
+      </script>
+      
 </body>
 </html>
